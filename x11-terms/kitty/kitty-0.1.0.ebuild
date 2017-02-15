@@ -14,8 +14,13 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
-RDEPEND=">=media-libs/glew-2.0.0"
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+		virtual/pkgconfig"
+RDEPEND=">=media-libs/glew-2.0.0
+		 >=media-libs/glfw-3.2
+		 media-libs/fontconfig
+		 x11-apps/xdpyinfo
+		 x11-misc/xsel"
 
 python_compile() {
 	esetup.py build
