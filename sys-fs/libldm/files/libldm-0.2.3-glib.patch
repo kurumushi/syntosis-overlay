@@ -1,0 +1,12 @@
+--- a/src/ldmtool.c.orig	2012-09-21 19:34:41.000000000 +0900
++++ b/src/ldmtool.c	2017-04-30 14:03:48.047977999 +0900
+@@ -777,7 +777,9 @@
+     }
+     g_option_context_free(context);
+ 
++    #if !GLIB_CHECK_VERSION(2,35,0)
+     g_type_init();
++    #endif
+ 
+     LDM * const ldm = ldm_new(&err);
+ 
