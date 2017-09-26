@@ -16,7 +16,8 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="dev-libs/marisa[python]"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+         app-i18n/skk-jisyo"
 
 src_compile() {
 	python_setup 'python2*'
