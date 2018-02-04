@@ -1,0 +1,11 @@
+#!/sbin/openrc-run
+
+depend() {
+	before localmount
+	use lvm
+}
+
+command=/usr/bin/ldmtool
+command_args="create all"
+description="Automatically scan windows LDM volumes."
+

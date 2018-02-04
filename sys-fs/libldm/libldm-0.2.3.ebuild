@@ -33,3 +33,8 @@ src_prepare() {
 	default_src_prepare
 	eautoreconf
 }
+
+src_install() {
+	doinitd ${FILESDIR}/libldm
+	default_src_install
+}
