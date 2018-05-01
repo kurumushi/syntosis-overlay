@@ -12,11 +12,10 @@ SRC_URI="http://download.fcitx-im.org/${PN}/${P}.tar.xz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="qt"
+IUSE=""
 
-DEPEND=""
-RDEPEND="${DEPEND}
-		 >=app-i18n/libkkc-0.2.3
-		 qt? ( >=app-i18n/fcitx-qt-4.2.8 )
-		 app-i18n/libkkc-data
-		 app-i18n/fcitx"
+DEPEND=" >=app-i18n/libkkc-0.2.3
+		 >=app-i18n/libkkc-data-0.2.7
+		 >=app-i18n/fcitx-4.2.8
+		 app-i18n/skk-jisyo"
+RDEPEND="${DEPEND}"
